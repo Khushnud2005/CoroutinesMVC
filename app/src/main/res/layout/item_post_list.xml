@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<com.chauthai.swipereveallayout.SwipeRevealLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/swipe_layout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="10dp"
+app:dragEdge="left"
+app:mode="same_level">
+
+<FrameLayout
+    android:id="@+id/delete_layout"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffcc0000">
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_delete"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/iv_delete2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:padding="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/ic_delete"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</FrameLayout>
+
+<FrameLayout
+    android:id="@+id/front_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_poster"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Body"
+            android:textSize="17sp"
+            android:textStyle="normal" />
+    </LinearLayout>
+</FrameLayout>
+</com.chauthai.swipereveallayout.SwipeRevealLayout>-->
+
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sl_swipe"
+    app:clickToClose="true"
+    android:padding="10dp">
+<!-- Bottom View Start-->
+<LinearLayout
+    android:id="@+id/ll_linear_left"
+    android:layout_width="160dp"
+    android:weightSum="1"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center">
+    <!--What you want to show-->
+    <TextView
+        android:id="@+id/tv_edit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Edit"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="#57BB61"/>
+</LinearLayout>
+    <LinearLayout
+        android:background="#66ddff00"
+        android:id="@+id/ll_linear_right"
+        android:layout_width="160dp"
+        android:weightSum="1"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+        <!--What you want to show-->
+        <TextView
+            android:id="@+id/tv_delete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Delete"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="#FE2E1F"/>
+    </LinearLayout>
+<!-- Bottom View End-->
+
+<!-- Surface View Start -->
+<LinearLayout
+    android:id="@+id/ll_item"
+    android:padding="10dp"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--What you want to show in SurfaceView-->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Body"
+        android:textSize="17sp"
+        android:textStyle="normal" />
+</LinearLayout>
+<!-- Surface View End -->
+</com.daimajia.swipe.SwipeLayout>
